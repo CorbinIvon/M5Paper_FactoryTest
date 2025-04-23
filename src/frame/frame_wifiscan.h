@@ -4,8 +4,9 @@
 #include "frame_base.h"
 #include "../epdgui/epdgui.h"
 
-class Frame_WifiScan : public Frame_Base {
-   public:
+class Frame_WifiScan : public Frame_Base
+{
+public:
     Frame_WifiScan();
     ~Frame_WifiScan();
     int init(epdgui_args_vector_t &args);
@@ -15,7 +16,7 @@ class Frame_WifiScan : public Frame_Base {
     void DrawItem(EPDGUI_Button *btn, String ssid, int rssi);
     void SetConnected(String ssid, int rssi);
 
-   private:
+private:
     EPDGUI_Button *_key_wifi[14];
     uint8_t _language;
     uint32_t _scan_count = 0;
@@ -25,4 +26,4 @@ class Frame_WifiScan : public Frame_Base {
     String _connect_password;
 };
 
-#endif  //_FRAME_SETTING_H_
+#endif //_FRAME_SETTING_H_

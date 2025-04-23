@@ -4,14 +4,15 @@
 #include "frame_base.h"
 #include "../epdgui/epdgui.h"
 
-class Frame_Keyboard : public Frame_Base {
-   public:
+class Frame_Keyboard : public Frame_Base
+{
+public:
     Frame_Keyboard(bool isHorizontal = false);
     ~Frame_Keyboard();
     int run();
     int init(epdgui_args_vector_t &args);
 
-   private:
+private:
     EPDGUI_Textbox *inputbox;
     EPDGUI_Keyboard *keyboard;
     EPDGUI_Button *key_textclear;
@@ -20,4 +21,4 @@ class Frame_Keyboard : public Frame_Base {
     EPDGUI_Button *key_textsize_minus;
 };
 
-#endif  //_FRAME_KEYBOARD_H_
+#endif //_FRAME_KEYBOARD_H_
